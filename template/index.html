@@ -1,0 +1,10 @@
+<h1>hello</h1>
+<!-- {{question.id}} -->
+
+{% if polls %}
+<ul>
+{% for question in polls %}
+<li><a href='/poll/{{question.id}}'>{{question.question_text}}</a>
+{% endfor %}
+</ul>
+{% endif %}
