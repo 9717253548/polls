@@ -2,15 +2,36 @@
 <!-- {{question.id}} -->
 
 {% if polls %}
+<table border= 2>
+	{% for question in polls %}
+	<tr>
+		<th>{{forloop.counter}}</th>
+
+		<th> <a href='/poll/{{question.id}}'> {{question.question_text }}</a></th>
+
+	</tr>
+	{% endfor %}
+
+
+</table>
+{% endif %}
+<!-- 
+{% if polls %}
 <ul>
 {% for question in polls %}
+<table><th><tr><td>
 <li><a href='/poll/{{question.id}}'>{{question.question_text}}</a>
 {% endfor %}
 </ul>
 <h1>hello vipin</h1>
+</li></td>
+</li></tr></th>
+</table> -->
 
 
 
 
 
-{% endif %}
+
+
+<!-- {% endif %} -->
